@@ -63,14 +63,12 @@ public class BasicSecurityConfig {
 	        .authorizeHttpRequests((auth) -> auth
 	                .requestMatchers("/usuarios/logar").permitAll()
 	                .requestMatchers("/usuarios/cadastrar").permitAll()
-	                .requestMatchers("/error/**").permitAll()
 	                .requestMatchers("/temas").permitAll()
 	                .requestMatchers("/temas/{id}").permitAll()
-	                .requestMatchers("/temas/descricao/tema").permitAll()
-	                .requestMatchers("/error/**").permitAll()
+	                .requestMatchers("/temas/descricao/{descricao}").permitAll()
 	                .requestMatchers("/postagens").permitAll()
 	                .requestMatchers("/postagens/{id}").permitAll()
-	                .requestMatchers("/postagens//titulo/{titulo}").permitAll()
+	                .requestMatchers("/postagens/titulo/{titulo}").permitAll()
 	                .requestMatchers("/error/**").permitAll()
 
 	                .requestMatchers(HttpMethod.OPTIONS).permitAll()
