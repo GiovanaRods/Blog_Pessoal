@@ -14,7 +14,7 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*", allowedHeaders = "*") 
 public class SmsController {
 
-    private final SmsService smsService;
+    private SmsService smsService;
 
     public SmsController(SmsService smsService) {
         this.smsService = smsService;
@@ -29,6 +29,7 @@ public class SmsController {
         private String to;
         
         private String body;
+        
 		public String getTo() {
 			return to;
 		}
