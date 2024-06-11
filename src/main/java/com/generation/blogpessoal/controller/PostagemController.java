@@ -27,7 +27,6 @@ import jakarta.validation.Valid;
 @RequestMapping("/postagens")
 @CrossOrigin(origins = "*", allowedHeaders = "*") 
 
-
 public class PostagemController {
 	@Autowired 
 	private PostagemRepository postagemrepository;
@@ -81,14 +80,5 @@ public class PostagemController {
 		if(postagem.isEmpty())
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 		postagemrepository.deleteById(id);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }
